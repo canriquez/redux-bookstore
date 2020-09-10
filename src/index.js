@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App'
 
-const App = () => (
-  <h1>
-    BookStore Heroku Test
-  </h1>
+const Main = () => (
+  <div>
+    <App />
+  </div>
 );
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById('root'));
