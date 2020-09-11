@@ -1,12 +1,29 @@
 import React from 'react'
 import Book from '../components/Book'
+import { connect } from 'react-redux'
 
-const BooksList = ({ store }) => {
+
+
+const mapStateToProps = (state) => {
+    return {
+        state
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {}
+}
+
+
+const renderList = ({
+    state
+}) => {
+
     return (
         <div>
             <ul>
                 {
-                    booklist.map(book =>
+                    state.books.map(book =>
                         <Book
                             key={book.id}
                             {...book}
@@ -18,6 +35,11 @@ const BooksList = ({ store }) => {
         </div>
     )
 }
+
+const BooksList = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(renderList)
 
 
 export default BooksList

@@ -1,13 +1,17 @@
 import React from 'react'
 
-const Book = (book) => {
+const Book = ({
+    id,
+    category,
+    title
+}) => {
 
     return (
 
         <li>
             <div>
-                <h3>{book.category}</h3>
-                <h1>{book.title}</h1>
+                <h3>{category}</h3>
+                <h1>{title}</h1>
             </div>
             <div>
                 <button type="button">Delete Book</button>
