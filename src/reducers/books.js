@@ -32,9 +32,10 @@ const books = (state = booksList, action) => {
         },
       ];
     case REMOVE_BOOK:
-        let newState = [];
-        state.map(item => item.id !== action.id ? newState.push(item): []);
-        return newState;
+      // eslint-disable-next-line no-case-declarations
+      const newState = [];
+      state.map(item => (item.id !== action.id ? newState.push(item) : []));
+      return newState;
     default:
       return state;
   }
