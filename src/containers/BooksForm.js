@@ -1,6 +1,7 @@
 import React from 'react';
 import { randomId } from '../helpers/help';
 import { addBook } from '../actions/index'
+import { connect } from 'react-redux';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -81,4 +82,8 @@ const mapDispatchToProps = (dispach) => {
   }
 }
 
-export default BooksForm;
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(BooksForm);
