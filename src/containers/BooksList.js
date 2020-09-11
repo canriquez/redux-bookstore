@@ -1,45 +1,35 @@
-import React from 'react'
-import Book from '../components/Book'
-import { connect } from 'react-redux'
+import React from 'react';
+import { connect } from 'react-redux';
+import Book from '../components/Book';
 
+const mapStateToProps = state => ({
+  state,
+});
 
-
-const mapStateToProps = (state) => {
-    return {
-        state
-    }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {}
-}
-
+const mapDispatchToProps = () => ({});
 
 const renderList = ({
-    state
-}) => {
-
-    return (
-        <div>
-            <ul>
-                {
-                    state.books.map(book =>
-                        <Book
-                            key={book.id}
-                            {...book}
-                        />
-                    )
+  state,
+}) => (
+  <div>
+    <ul>
+      {
+                    state.books.map(book => (
+                      <Book
+                        key={book.id}
+                        // eslint-disable-next-line react/jsx-props-no-spreading
+                        {...book}
+                      />
+                    ))
                 }
 
-            </ul>
-        </div>
-    )
-}
+    </ul>
+  </div>
+);
 
 const BooksList = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(renderList)
+  mapStateToProps,
+  mapDispatchToProps,
+)(renderList);
 
-
-export default BooksList
+export default BooksList;

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App'
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import App from './components/App';
 import rootReducer from './reducers/index';
 
 const Main = () => (
@@ -12,10 +12,11 @@ const Main = () => (
 );
 
 const store = createStore(rootReducer);
-//console.log(store.getState());
+// console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>
     <Main />
-  </Provider>
-  , document.getElementById('root'));
+  </Provider>,
+  document.getElementById('root'),
+);
