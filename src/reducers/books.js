@@ -1,6 +1,5 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../helpers/help';
+import { CREATE_BOOK, REMOVE_BOOK, randomId } from '../helpers/help';
 
-const randomId = () => Math.floor(Math.random() * Math.floor(50000));
 
 const booksList = [
   {
@@ -32,9 +31,9 @@ const books = (state = booksList, action) => {
         },
       ];
     case REMOVE_BOOK:
-        let newState = [];
-        state.map(item => item.id !== action.id ? newState.push(item): []);
-        return newState;
+      let newState = [];
+      state.map(item => item.id !== action.id ? newState.push(item) : []);
+      return newState;
     default:
       return state;
   }

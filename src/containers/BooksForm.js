@@ -4,7 +4,7 @@ class BooksForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { 
+    this.state = {
       title: '',
       category: ''
     };
@@ -24,33 +24,36 @@ class BooksForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
+  handleChange(e) {
+    let formTitle = document.getElementById('inputValue').value;
+    let select = document.getElementById('category').value;
     this.setState({
-      title: event.target.value,
+      title: formTitle,
+      category: this.categories[select]
     });
+    setTimeout(() => { console.log(this.state) }, 200);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    let select =  document.getElementById('category').value;
-    this.setState({
-      category: select,
-    });
-    setTimeout(() => {console.log(this.state)}, 200);
+    if (this.state.title === '' || this.state.category === '') { return }
+    console.log('Valid Submit hit')
+
+    setTimeout(() => { console.log(this.state) }, 200);
   }
 
-  render () {
+  render() {
     return (
-      <form action="#" onSubmit={this.handleSubmit}>
-        <input type="text" onChange={this.handleChange} value={this.state.title}/>
-        <select name="category" id="category" >
+      <form action="#" onSubmit={this.handleSubmit} >
+        <input type="text" onChange={this.handleChange} value={this.state.title} id="inputValue" />
+        <select name="category" id="category" onChange={this.handleChange} >
           {
-                      this.categories.map((cat, id) => (
-                        <option key={`opt_${id * 2}`} value={id}>{cat}</option>
-                      ))
-                  }
+            this.categories.map((cat, id) => (
+              <option key={`opt_${id * 2}`} value={id}>{cat}</option>
+            ))
+          }
         </select>
-        <button type="button">Add Book</button>
+        <button type="submit">Add Book</button>
       </form>
 
     );
