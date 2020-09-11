@@ -1,29 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
-import { removeBook } from '../actions/index'
+import { removeBook } from '../actions/index';
 
 const mapStateToProps = state => ({
   state,
 });
 
-const mapDispatchToProps = (dispach) => {
-  return {
-    handleRemoveBook: (book) => {
-      dispach(removeBook(book))
-    }
-  }
-}
+const mapDispatchToProps = dispach => ({
+  handleRemoveBook: book => {
+    dispach(removeBook(book));
+  },
+});
 
 /* const mapDispatchToProps = () => ({});
  */
 const renderList = ({
   state,
-  handleRemoveBook
+  handleRemoveBook,
 }) => (
-    <div>
-      <ul>
-        {
+  <div>
+    <ul>
+      {
           state.books.map(book => (
             <Book
               key={book.id}
@@ -35,9 +33,9 @@ const renderList = ({
           ))
         }
 
-      </ul>
-    </div>
-  );
+    </ul>
+  </div>
+);
 
 const BooksList = connect(
   mapStateToProps,

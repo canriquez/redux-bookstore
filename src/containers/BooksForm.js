@@ -1,7 +1,8 @@
 import React from 'react';
-import { randomId } from '../helpers/help';
-import { addBook } from '../actions/index'
 import { connect } from 'react-redux';
+import { PropTypes } from 'prop-types';
+import { randomId } from '../helpers/help';
+import { addBook } from '../actions/index';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class BooksForm extends React.Component {
 
     this.state = {
       title: '',
-      category: ''
+      category: '',
     };
 
     this.categories = [
@@ -25,42 +26,37 @@ class BooksForm extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    //this.mapDispatchToProps = this.mapDispatchToProps.bind(this);
+    // this.mapDispatchToProps = this.mapDispatchToProps.bind(this);
   }
 
-
-
-  handleChange(e) {
-    let formTitle = document.getElementById('inputValue').value;
-    let select = document.getElementById('category').value;
+  handleChange() {
+    const formTitle = document.getElementById('inputValue').value;
+    const select = document.getElementById('category').value;
     this.setState({
       title: formTitle,
-      category: this.categories[select]
+      category: this.categories[select],
     });
-    setTimeout(() => { console.log(this.state) }, 200);
   }
-
 
   handleSubmit(e) {
     e.preventDefault();
     const { onSubmitCreateBook } = this.props;
-    if (this.state.title === '' || this.state.category === 'Select Category') { return }
-    console.log('Valid Submit hit')
-    setTimeout(() => { console.log(this.state) }, 200);
+    const { title, category } = this.state;
+    if (title === '' || category === 'Select Category') { return; }
 
     const book = {
       ...this.state,
-      id: randomId()
-    }
-    onSubmitCreateBook(book)
-
+      id: randomId(),
+    };
+    onSubmitCreateBook(book);
   }
 
   render() {
+    const { title } = this.state;
     return (
-      <form action="#" onSubmit={this.handleSubmit} >
-        <input type="text" onChange={this.handleChange} value={this.state.title} id="inputValue" />
-        <select name="category" id="category" onChange={this.handleChange} >
+      <form action="#" onSubmit={this.handleSubmit}>
+        <input type="text" onChange={this.handleChange} value={title} id="inputValue" />
+        <select name="category" id="category" onChange={this.handleChange}>
           {
             this.categories.map((cat, id) => (
               <option key={`opt_${id * 2}`} value={id}>{cat}</option>
@@ -72,15 +68,16 @@ class BooksForm extends React.Component {
 
     );
   }
-};
-
-const mapDispatchToProps = (dispach) => {
-  return {
-    onSubmitCreateBook: (book) => {
-      dispach(addBook(book))
-    }
-  }
 }
 
+BooksForm.propTypes = {
+  onSubmitCreateBook: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = dispach => ({
+  onSubmitCreateBook: book => {
+    dispach(addBook(book));
+  },
+});
 
 export default connect(null, mapDispatchToProps)(BooksForm);
