@@ -1,7 +1,26 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../helpers/help'
 
+const randomId = () => Math.floor(Math.Random() * Math.floor(50000));
 
-const books = (state = [], action) => {
+    let booksList = [
+        {
+            id: randomId,
+            category: 'Horror',
+            title: 'Psycho Thriller'
+        },
+        {
+            id: randomId,
+            category: 'History',
+            title: 'Mine Craft - Adolf Hittler'
+        },
+        {
+            id: randomId,
+            category: 'Learning',
+            title: 'Tools of Titans'
+        }
+    ];
+
+const books = (state = booksList, action) => {
     switch (action.type) {
         case CREATE_BOOK:
             return [
@@ -22,3 +41,5 @@ const books = (state = [], action) => {
 
     }
 }
+
+export default books;
