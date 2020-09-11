@@ -44,7 +44,7 @@ class BooksForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const { onSubmitCreateBook } = this.props;
-    if (this.state.title === '' || this.state.category === '') { return }
+    if (this.state.title === '' || this.state.category === 'Select Category') { return }
     console.log('Valid Submit hit')
     setTimeout(() => { console.log(this.state) }, 200);
 
@@ -83,7 +83,4 @@ const mapDispatchToProps = (dispach) => {
 }
 
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(BooksForm);
+export default connect(null, mapDispatchToProps)(BooksForm);
