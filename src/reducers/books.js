@@ -32,10 +32,9 @@ const books = (state = booksList, action) => {
         },
       ];
     case REMOVE_BOOK:
-      return [
-        ...state.slice(0, action.index),
-        ...state.slice(action.index + 1, state.length),
-      ];
+        let newState = [];
+        state.map(item => item.id != action.id ? newState.push(item): []);
+        return newState;
     default:
       return state;
   }
