@@ -1,4 +1,6 @@
 import React from 'react';
+import { randomId } from '../helpers/help';
+import { addBook } from '../actions/index'
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -22,7 +24,10 @@ class BooksForm extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    //this.mapDispatchToProps = this.mapDispatchToProps.bind(this);
   }
+
+
 
   handleChange(e) {
     let formTitle = document.getElementById('inputValue').value;
@@ -34,12 +39,20 @@ class BooksForm extends React.Component {
     setTimeout(() => { console.log(this.state) }, 200);
   }
 
+
   handleSubmit(e) {
     e.preventDefault();
+    const { onSubmitCreateBook } = this.props;
     if (this.state.title === '' || this.state.category === '') { return }
     console.log('Valid Submit hit')
-
     setTimeout(() => { console.log(this.state) }, 200);
+
+    const book = {
+      ...this.state,
+      id: randomId()
+    }
+    onSubmitCreateBook(book)
+
   }
 
   render() {
@@ -59,5 +72,13 @@ class BooksForm extends React.Component {
     );
   }
 };
+
+const mapDispatchToProps = (dispach) => {
+  return {
+    onSubmitCreateBook: (book) => {
+      dispach(addBook(book))
+    }
+  }
+}
 
 export default BooksForm;
