@@ -1,6 +1,4 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../helpers/help';
-
-const randomId = () => Math.floor(Math.random() * Math.floor(50000));
+import { CREATE_BOOK, REMOVE_BOOK, randomId } from '../helpers/help';
 
 const booksList = [
   {
@@ -32,7 +30,9 @@ const books = (state = booksList, action) => {
         },
       ];
     case REMOVE_BOOK:
-      // eslint-disable-next-line no-case-declarations
+
+      // eslint-disable-next-line
+
       const newState = [];
       state.map(item => (item.id !== action.id ? newState.push(item) : []));
       return newState;
