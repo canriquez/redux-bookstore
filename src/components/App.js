@@ -3,12 +3,12 @@ import BooksList from '../containers/BooksList';
 import BooksForm from '../containers/BooksForm';
 
 const App = () => (
-  <div className='Bookstore-CMS'>
+  <div className='panel'>
     <div className='panel-bg'>
       <span className='title-header'>Bookstore CMS</span>
-      <p>books</p>
+      <p className='books'>books</p>
       <p></p>
-      <i></i>
+      <i className='login'></i>
     </div>
     <BooksList />
     <BooksForm />

@@ -14,7 +14,7 @@
   --azure: #0290ff;
   --medium-blue: #307bbe;
   --dodger-blue: #379cf6;
-  --white: #fafafa;
+  --white: #ffffff;
 }
 
 /* Fonts */
@@ -36,14 +36,25 @@
   font-stretch: normal;
 }
 
-.Bookstore-CMS {
+.panel {
+  margin: 0 auto;
   position: relative;
+  width: 1400px;
+  height: 1097px;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+}
+
+/* .Bookstore-CMS {
+  margin-left: 100px;
   width: 1600px;
   height: 1434px;
   background-color: var(--pale-grey);
 }
-
+ */
 .title-header {
+  margin-left: 100px;
   width: 240px;
   height: 37px;
   font-family: Montserrat;
@@ -71,16 +82,51 @@
   background-color: var(--white);
 }
 
-.panel-bg p:nth-child(2) {
+.books {
+  width: 59px;
+  height: 16px;
   margin-left: 50px;
   margin-right: 50px;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-three);
+  text-transform: uppercase;
+}
+
+.categories {
+  width: 105px;
+  height: 16px;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-three);
+  background: #ffffff;
 }
 
 #filter-category {
   position: absolute;
-  top: 2.8%;
-  left: 30%;
+  top: 3.7%;
+  left: 36%;
   border: none;
+}
+
+.login {
+  margin-left: 55%;
+  background-image: url("./icons/login_icon.png");
+  background-repeat: no-repeat, repeat;
+  width: 45px;
+  height: 45px;
+  background-size: cover;
 }
 
 .Current-Chapter {
