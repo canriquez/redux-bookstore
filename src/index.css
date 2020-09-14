@@ -36,7 +36,7 @@
   font-stretch: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
 
 .panel {
   margin: 0 auto;
@@ -73,6 +73,7 @@
   position: relative;
   top: 0;
   left: 50%;
+  margin-bottom: 40px;
   transform: translateX(-50%);
   display: flex;
   flex-direction: row;
@@ -129,13 +130,15 @@
   width: 45px;
   height: 45px;
   background-size: cover;
-
 }
 
 .list-item {
+  display: flex;
   position: relative;
   list-style: none;
   margin: 1em auto;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .Lesson-Panel {
@@ -150,7 +153,7 @@
   width: 126px;
   height: 18px;
   opacity: 0.5;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-size: 13px;
   font-weight: 300;
   font-stretch: normal;
@@ -158,6 +161,7 @@
   line-height: normal;
   letter-spacing: normal;
   color: var(--black-three);
+  text-transform: uppercase;
 }
 
 .School-of {
@@ -175,7 +179,6 @@
 }
 
 .title {
-  width: 197px;
   height: 29px;
   font-family: RobotoSlab;
   font-size: 22px;
@@ -187,10 +190,18 @@
   color: var(--black-three);
 }
 
+.book-actions {
+  width: 30%;
+  height: 66%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .Suzanne-Collins {
   width: 107px;
   height: 19px;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-size: 14px;
   font-weight: 300;
   font-stretch: normal;
@@ -203,7 +214,7 @@
 .book-option {
   position: relative;
   height: 19px;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-size: 14px;
   font-weight: 300;
   font-stretch: normal;
@@ -212,6 +223,15 @@
   letter-spacing: normal;
   color: #4386bf;
   text-decoration: none;
+}
+
+.middle-option {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-left: solid 1px #e8e8e8;
+  border-right: solid 1px #e8e8e8;
 }
 
 .-Percent-Complete {
@@ -245,7 +265,7 @@
   width: 126px;
   height: 18px;
   opacity: 0.5;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-size: 13px;
   font-weight: 300;
   font-stretch: normal;
@@ -258,7 +278,7 @@
 .Current-Lesson {
   width: 75px;
   height: 21px;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-size: 16px;
   font-weight: 300;
   font-stretch: normal;
@@ -266,6 +286,7 @@
   line-height: normal;
   letter-spacing: -0.4px;
   color: var(--black-three);
+  margin: 8px 0;
 }
 
 .Rectangle-2 {
@@ -280,7 +301,7 @@
   position: relative;
   width: 143px;
   height: 18px;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-size: 13px;
   font-weight: 300;
   font-stretch: normal;
@@ -293,9 +314,24 @@
   margin: auto;
 }
 
+.progress-numbers {
+  height: 72%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .Rectangle-3 {
   width: 90px;
   height: 89.9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.completion-meter {
+  display: flex;
+  align-items: center;
 }
 
 .Oval-2 {
@@ -311,4 +347,51 @@
   width: 2px;
   height: 70px;
   border: solid 1px #e8e8e8;
+}
+
+/*  Form title */
+
+.form-block {
+  margin: 25px auto;
+  width: 1200px;
+  border-top: solid 1px #e8e8e8;
+}
+
+.form-title {
+  height: 24px;
+  margin: 24px 0;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888888;
+  text-transform: uppercase;
+}
+
+#inputValue {
+  width: 664px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+}
+
+#category {
+  width: 285px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+}
+
+#submit-btn {
+  height: 45px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
 }
