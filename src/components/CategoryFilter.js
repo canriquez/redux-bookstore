@@ -17,7 +17,6 @@ const CategoryFilter = ({
 
   const handleChange = e => {
     handleFilterChange(categories[e.target.value]);
-    console.log(categories[e.target.value]);
   };
 
   return (
