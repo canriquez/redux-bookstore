@@ -4,5 +4,72 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
+}
+
+.Bookstore-CMS {
+  width: 1600px;
+  height: 1434px;
+  background-color: var(--pale-grey);
+}
+
+.title-header {
+  width: 240px;
+  height: 37px;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure);
+}
+
+.panel-bg {
+  width: 1400px;
+  height: 1097px;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+}
+
+.Current-Chapter {
+  width: 126px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: RobotoSlab;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
+
+.School-of {
+  width: 49px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
+
+title {
+  width: 197px;
+  height: 29px;
+  font-family: RobotoSlab;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-three);
 }
