@@ -21,15 +21,20 @@
 
 @font-face {
   font-family: Montserrat;
-  src: local(Montserrat-Regular), url(/fonts/monserrat_woff/Montserrat-Regular.woff2) format("woff2"),
+  src:
+    local(montserrat-regular),
+    url(/fonts/monserrat_woff/Montserrat-Regular.woff2) format("woff2"),
     url(/fonts/monserrat_woff/Montserrat-Regular.woff) format("woff");
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
 }
+
 @font-face {
   font-family: Montserrat;
-  src: local(Montserrat-Bold), url(/fonts/monserrat_woff/Montserrat-Bold.woff2) format("woff2"),
+  src:
+    local(montserrat-bold),
+    url(/fonts/monserrat_woff/Montserrat-Bold.woff2) format("woff2"),
     url(/fonts/monserrat_woff/Montserrat-Bold.woff) format("woff");
   font-weight: bold;
   font-style: normal;
@@ -82,7 +87,7 @@
   height: 97px;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .books {
@@ -113,7 +118,7 @@
   line-height: normal;
   letter-spacing: 1.9px;
   color: var(--black-three);
-  background: #ffffff;
+  background: #fff;
 }
 
 #filter-category {
@@ -146,7 +151,7 @@
   height: 170px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .Current-Chapter {
@@ -261,20 +266,6 @@
   color: var(--black-three);
 }
 
-.Current-Chapter {
-  width: 126px;
-  height: 18px;
-  opacity: 0.5;
-  font-family: "Roboto Slab", serif;
-  font-size: 13px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: var(--black-three);
-}
-
 .Current-Lesson {
   width: 75px;
   height: 21px;
@@ -309,7 +300,7 @@
   line-height: normal;
   letter-spacing: 0.5px;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   margin: auto;
 }
@@ -367,7 +358,7 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.18px;
-  color: #888888;
+  color: #888;
   text-transform: uppercase;
 }
 
@@ -376,7 +367,7 @@
   height: 45px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
-  background-color: #ffffff;
+  background-color: #fff;
   font-size: 16px;
   padding-left: 15px;
 }
@@ -390,7 +381,7 @@
   height: 45px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
-  background-color: #ffffff;
+  background-color: #fff;
   font-size: 16px;
   padding-left: 15px;
   color: #c4c4c4;
@@ -398,10 +389,9 @@
 
 #submit-btn {
   height: 45px;
-  
 }
 
-#submit-btn>p {
+#submit-btn > p {
   font-weight: bold;
 }
 

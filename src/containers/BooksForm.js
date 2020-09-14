@@ -54,12 +54,12 @@ class BooksForm extends React.Component {
   render() {
     const { title } = this.state;
     return (
-      <div className='form-block'>
-        <div className='form-title'>
+      <div className="form-block">
+        <div className="form-title">
           add new book
         </div>
         <form action="#" onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange} value={title} id="inputValue" placeholder='Book title' />
+          <input type="text" onChange={this.handleChange} value={title} id="inputValue" placeholder="Book title" />
           <select name="category" id="category" onChange={this.handleChange}>
             {
               this.categories.map((cat, id) => (
@@ -67,7 +67,7 @@ class BooksForm extends React.Component {
               ))
             }
           </select>
-          <button id="submit-btn" className="Rectangle-2" type="submit"><p className='Update-progress'>Add Book</p></button>
+          <button id="submit-btn" className="Rectangle-2" type="submit"><p className="Update-progress">Add Book</p></button>
         </form>
       </div>
     );
