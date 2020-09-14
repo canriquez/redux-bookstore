@@ -6,7 +6,38 @@
   -moz-box-sizing: border-box;
 }
 
+:root {
+  --bubble-gum-pink: #ff5ab7;
+  --black: #1e1e1e;
+  --pale-grey: #f5f6fa;
+  --black-three: #121212;
+  --azure: #0290ff;
+  --medium-blue: #307bbe;
+  --dodger-blue: #379cf6;
+  --white: #fafafa;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: Montserrat;
+  src: local(Montserrat-Regular), url(/fonts/monserrat_woff/Montserrat-Regular.woff2) format("woff2"),
+    url(/fonts/monserrat_woff/Montserrat-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  src: local(Montserrat-Bold), url(/fonts/monserrat_woff/Montserrat-Bold.woff2) format("woff2"),
+    url(/fonts/monserrat_woff/Montserrat-Bold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
 .Bookstore-CMS {
+  position: relative;
   width: 1600px;
   height: 1434px;
   background-color: var(--pale-grey);
@@ -26,11 +57,30 @@
 }
 
 .panel-bg {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 1400px;
-  height: 1097px;
+  height: 97px;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
   background-color: var(--white);
+}
+
+.panel-bg p:nth-child(2) {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#filter-category {
+  position: absolute;
+  top: 2.8%;
+  left: 30%;
+  border: none;
 }
 
 .Current-Chapter {

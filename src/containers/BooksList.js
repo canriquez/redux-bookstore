@@ -30,12 +30,12 @@ const renderList = ({
   handleRemoveBook,
   handleFilterChange,
 }) => (
-  <div>
-    <CategoryFilter
-      handleFilterChange={handleFilterChange}
-    />
-    <ul>
-      {
+    <div>
+      <CategoryFilter
+        handleFilterChange={handleFilterChange}
+      />
+      <ul>
+        {
           // eslint-disable-next-line
           state.books.map(book => {
             const fBook = filterBook(book, state.filter);
@@ -53,9 +53,9 @@ const renderList = ({
 
         }
 
-    </ul>
-  </div>
-);
+      </ul>
+    </div>
+  );
 
 const BooksList = connect(
   mapStateToProps,
