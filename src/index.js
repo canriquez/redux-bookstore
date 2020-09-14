@@ -5,18 +5,12 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import rootReducer from './reducers/index';
 
-const Main = () => (
-  <div>
-    <App />
-  </div>
-);
-
 const store = createStore(rootReducer);
 // console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>
-    <Main />
+    <App />
   </Provider>,
   document.getElementById('root'),
 );

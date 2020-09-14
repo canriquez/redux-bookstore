@@ -16,7 +16,6 @@ it('test changeFilter', () => {
   ).toEqual(stateAfter);
 });
 
-
 it('test changeFilter to empty string', () => {
   const stateBefore = 'All';
 
@@ -26,7 +25,7 @@ it('test changeFilter to empty string', () => {
   deepFreeze(stateBefore); // makes sure reducer is pure function
   deepFreeze(changeFilter); // makes sure reducer is pure function
 
-  console.log(changeFilter(''))
+  console.log(changeFilter(''));
 
   expect(
     filter(stateBefore, changeFilter('')),

@@ -4,4 +4,6 @@ const CHANGE_FILTER = 'CHANGE_FILTER';
 
 const randomId = () => Math.floor(Math.random() * Math.floor(50000));
 
-export { CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER, randomId };
+export {
+  CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER, randomId,
+};
