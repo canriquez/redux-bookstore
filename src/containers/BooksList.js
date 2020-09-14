@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
+import CategoryFilter from '../components/CategoryFilter';
 import { removeBook } from '../actions/index';
 
 const mapStateToProps = state => ({
@@ -20,6 +21,7 @@ const renderList = ({
   handleRemoveBook,
 }) => (
   <div>
+    <CategoryFilter />
     <ul>
       {
           state.books.map(book => (
