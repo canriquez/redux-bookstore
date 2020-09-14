@@ -59,7 +59,7 @@
   margin-left: 100px;
   width: 240px;
   height: 37px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   font-weight: bold;
   font-stretch: normal;
@@ -90,7 +90,7 @@
   height: 16px;
   margin-left: 50px;
   margin-right: 50px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
@@ -105,7 +105,7 @@
   width: 105px;
   height: 16px;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
@@ -168,7 +168,7 @@
   width: 49px;
   height: 18px;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
@@ -180,7 +180,7 @@
 
 .title {
   height: 29px;
-  font-family: RobotoSlab;
+  font-family: "Roboto Slab", serif;
   font-size: 22px;
   font-weight: bold;
   font-stretch: normal;
@@ -237,7 +237,7 @@
 .-Percent-Complete {
   width: 68px;
   height: 39px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 32px;
   font-weight: normal;
   font-stretch: normal;
@@ -251,7 +251,7 @@
   width: 80px;
   height: 18px;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -360,7 +360,7 @@
 .form-title {
   height: 24px;
   margin: 24px 0;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
@@ -377,6 +377,12 @@
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #ffffff;
+  font-size: 16px;
+  padding-left: 15px;
+}
+
+#inputValue::placeholder {
+  color: #c4c4c4;
 }
 
 #category {
@@ -385,10 +391,18 @@
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #ffffff;
+  font-size: 16px;
+  padding-left: 15px;
+  color: #c4c4c4;
 }
 
 #submit-btn {
   height: 45px;
+  
+}
+
+#submit-btn>p {
+  font-weight: bold;
 }
 
 form {
