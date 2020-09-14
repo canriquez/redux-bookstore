@@ -1,7 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
-import { removeBook } from '../actions/index';
+import CategoryFilter from '../components/CategoryFilter';
+import { removeBook, changeFilter } from '../actions/index';
+
+const filterBook = (
+  book, currentFilter,
+) => {
+  if (currentFilter === 'All') { return book; }
+  if (currentFilter === book.category) { return book; }
+  return false;
+};
 
 const mapStateToProps = state => ({
   state,
@@ -11,26 +20,37 @@ const mapDispatchToProps = dispach => ({
   handleRemoveBook: book => {
     dispach(removeBook(book));
   },
+  handleFilterChange: newFilter => {
+    dispach(changeFilter(newFilter));
+  },
 });
 
-/* const mapDispatchToProps = () => ({});
- */
 const renderList = ({
   state,
   handleRemoveBook,
+  handleFilterChange,
 }) => (
   <div>
+    <CategoryFilter
+      handleFilterChange={handleFilterChange}
+    />
     <ul>
       {
-          state.books.map(book => (
-            <Book
-              key={book.id}
-              id={book.id}
-              // eslint-disable-next-line react/jsx-props-no-spreading
-              book={book}
-              handleRemoveBook={handleRemoveBook}
-            />
-          ))
+          // eslint-disable-next-line
+          state.books.map(book => {
+            const fBook = filterBook(book, state.filter);
+            if (fBook) {
+              return (
+                <Book
+                  key={book.id}
+                  id={book.id}
+                  book={book}
+                  handleRemoveBook={handleRemoveBook}
+                />
+              );
+            }
+          })
+
         }
 
     </ul>

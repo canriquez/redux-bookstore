@@ -1,4 +1,4 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../helpers/help';
+import { CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER } from '../helpers/help';
 
 const addBook = book => ({
   type: CREATE_BOOK,
@@ -12,4 +12,9 @@ const removeBook = book => ({
   id: book.id,
 });
 
-export { addBook, removeBook };
+const changeFilter = filter => ({
+  type: CHANGE_FILTER,
+  filter,
+});
+
+export { addBook, removeBook, changeFilter };
