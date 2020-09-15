@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
-import { removeBook, changeFilter } from '../actions/index';
+import { removeBook, deleteApiBook, changeFilter } from '../actions/index';
 
 const filterBook = (
   book, currentFilter,
@@ -18,7 +18,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispach => ({
   handleRemoveBook: book => {
-    dispach(removeBook(book));
+    dispach(deleteApiBook(book))
+    //dispach(removeBook(book));
   },
   handleFilterChange: newFilter => {
     dispach(changeFilter(newFilter));
@@ -29,13 +30,16 @@ const renderList = ({
   state,
   handleRemoveBook,
   handleFilterChange,
-}) => (
-  <div>
-    <CategoryFilter
-      handleFilterChange={handleFilterChange}
-    />
-    <ul>
-      {
+}) => {
+
+
+return (
+    <div>
+      <CategoryFilter
+        handleFilterChange={handleFilterChange}
+      />
+      <ul>
+        {
           // eslint-disable-next-line
           state.books.map(book => {
             const fBook = filterBook(book, state.filter);
@@ -53,9 +57,9 @@ const renderList = ({
 
         }
 
-    </ul>
-  </div>
-);
+      </ul>
+    </div>
+  )};
 
 const BooksList = connect(
   mapStateToProps,

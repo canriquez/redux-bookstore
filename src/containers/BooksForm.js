@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { randomId } from '../helpers/help';
-import { addBook } from '../actions/index';
+import { addBook, createApiBook } from '../actions/index';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -80,7 +80,10 @@ BooksForm.propTypes = {
 
 const mapDispatchToProps = dispach => ({
   onSubmitCreateBook: book => {
-    dispach(addBook(book));
+    console.log('do create book');
+    console.log(book);
+    dispach(createApiBook(book)); // dispatch with thunk function
+    //dispach(addBook(book));
   },
 });
 
