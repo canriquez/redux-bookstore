@@ -21,7 +21,9 @@
 
 @font-face {
   font-family: Montserrat;
-  src: local(montserrat-regular), url(/fonts/monserrat_woff/Montserrat-Regular.woff2) format("woff2"),
+  src:
+    local(montserrat-regular),
+    url(/fonts/monserrat_woff/Montserrat-Regular.woff2) format("woff2"),
     url(/fonts/monserrat_woff/Montserrat-Regular.woff) format("woff");
   font-weight: normal;
   font-style: normal;
@@ -30,7 +32,9 @@
 
 @font-face {
   font-family: Montserrat;
-  src: local(montserrat-bold), url(/fonts/monserrat_woff/Montserrat-Bold.woff2) format("woff2"),
+  src:
+    local(montserrat-bold),
+    url(/fonts/monserrat_woff/Montserrat-Bold.woff2) format("woff2"),
     url(/fonts/monserrat_woff/Montserrat-Bold.woff) format("woff");
   font-weight: bold;
   font-style: normal;
