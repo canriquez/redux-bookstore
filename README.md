@@ -2,11 +2,11 @@
 
 # React Redux Bookstore App
 
-> React/Redux Project to build the front-end of an application to organise and manage small bookstore.
+> React/Redux Project to build the front-end of an application to organize and manage a small bookstore.
 
 <img src='./app_usage.gif' width='50%'/>
 
-Additional description about the project and its features.
+# Additional description about the project and its features.
 
 ## Built With
 
@@ -23,7 +23,7 @@ Additional description about the project and its features.
 
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+To get a local copy up and running, follow these simple steps.
 
 Clone or fork the <a href="https://github.com/canriquez/redux-bookstore/">repo</a> [git@github.com:canriquez/redux-bookstore.git].
 
@@ -58,9 +58,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Usage
 
-You are provided with a set of booklist to init the app. You are free to delete them and add your new prefered ones. Add as many as you like with the form provided on the footer setting a title and a book category. 
+You are provided with a set of booklist to init the app. You are free to delete them and add your new preferred ones. Add as many as you like with the form provided on the footer setting a title and a book category. 
 
-Once you have all of your books set on the list you can filter them with the category selector provided in navbar.
+Once you have all of your books set on the list, you can filter them with the navbar category selector.
 
 Refresh to get your app to init again.
 
@@ -91,7 +91,7 @@ Refresh to get your app to init again.
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](issues/).
 
@@ -101,9 +101,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+@microverseinc
+Family and friends!
 
 ## 📝 License
 
