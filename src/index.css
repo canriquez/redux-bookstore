@@ -21,9 +21,7 @@
 
 @font-face {
   font-family: Montserrat;
-  src:
-    local(montserrat-regular),
-    url(/fonts/monserrat_woff/Montserrat-Regular.woff2) format("woff2"),
+  src: local(montserrat-regular), url(/fonts/monserrat_woff/Montserrat-Regular.woff2) format("woff2"),
     url(/fonts/monserrat_woff/Montserrat-Regular.woff) format("woff");
   font-weight: normal;
   font-style: normal;
@@ -32,9 +30,7 @@
 
 @font-face {
   font-family: Montserrat;
-  src:
-    local(montserrat-bold),
-    url(/fonts/monserrat_woff/Montserrat-Bold.woff2) format("woff2"),
+  src: local(montserrat-bold), url(/fonts/monserrat_woff/Montserrat-Bold.woff2) format("woff2"),
     url(/fonts/monserrat_woff/Montserrat-Bold.woff) format("woff");
   font-weight: bold;
   font-style: normal;
@@ -307,6 +303,7 @@
 }
 
 .submit-btn {
+  width: 184px;
   position: relative;
   height: 45px;
   font-weight: bold;
@@ -372,6 +369,7 @@
 .inputValue {
   width: 664px;
   height: 45px;
+  margin-right: 34px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
@@ -386,6 +384,7 @@
 .category {
   width: 285px;
   height: 45px;
+  margin-right: 34px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
