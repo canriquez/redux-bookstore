@@ -64,7 +64,7 @@
   margin-left: 100px;
   width: 240px;
   height: 37px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: bold;
   font-stretch: normal;
@@ -95,7 +95,7 @@
   height: 16px;
   margin-left: 50px;
   margin-right: 50px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
@@ -107,10 +107,14 @@
 }
 
 .categories {
+  position: absolute;
+  top: 3.7%;
+  left: 36%;
+  border: none;
   width: 105px;
   height: 16px;
   opacity: 0.5;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
@@ -119,13 +123,6 @@
   letter-spacing: 1.9px;
   color: var(--black-three);
   background: #fff;
-}
-
-#filter-category {
-  position: absolute;
-  top: 3.7%;
-  left: 36%;
-  border: none;
 }
 
 .login {
@@ -173,7 +170,7 @@
   width: 49px;
   height: 18px;
   opacity: 0.5;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
@@ -242,7 +239,7 @@
 .-Percent-Complete {
   width: 68px;
   height: 39px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 32px;
   font-weight: normal;
   font-stretch: normal;
@@ -256,7 +253,7 @@
   width: 80px;
   height: 18px;
   opacity: 0.5;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -288,10 +285,8 @@
   border: none;
 }
 
-.Update-progress {
-  position: relative;
-  width: 143px;
-  height: 18px;
+/* buttons */
+.base-button {
   font-family: "Roboto Slab", serif;
   font-size: 13px;
   font-weight: 300;
@@ -303,6 +298,18 @@
   color: #fff;
   text-transform: uppercase;
   margin: auto;
+}
+
+.Update-progress {
+  position: relative;
+  width: 143px;
+  height: 18px;
+}
+
+.submit-btn {
+  position: relative;
+  height: 45px;
+  font-weight: bold;
 }
 
 .progress-numbers {
@@ -351,7 +358,7 @@
 .form-title {
   height: 24px;
   margin: 24px 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
@@ -362,7 +369,7 @@
   text-transform: uppercase;
 }
 
-#inputValue {
+.inputValue {
   width: 664px;
   height: 45px;
   border-radius: 4px;
@@ -372,11 +379,11 @@
   padding-left: 15px;
 }
 
-#inputValue::placeholder {
+.inputValue::placeholder {
   color: #c4c4c4;
 }
 
-#category {
+.category {
   width: 285px;
   height: 45px;
   border-radius: 4px;
@@ -385,14 +392,6 @@
   font-size: 16px;
   padding-left: 15px;
   color: #c4c4c4;
-}
-
-#submit-btn {
-  height: 45px;
-}
-
-#submit-btn > p {
-  font-weight: bold;
 }
 
 form {

@@ -59,15 +59,15 @@ class BooksForm extends React.Component {
           add new book
         </div>
         <form action="#" onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange} value={title} id="inputValue" placeholder="Book title" />
-          <select name="category" id="category" onChange={this.handleChange}>
+          <input className="inputValue" type="text" onChange={this.handleChange} value={title} id="inputValue" placeholder="Book title" />
+          <select className="category" name="category" id="category" onChange={this.handleChange}>
             {
               this.categories.map((cat, id) => (
                 <option key={`opt_${id * 2}`} value={id}>{cat}</option>
               ))
             }
           </select>
-          <button id="submit-btn" className="Rectangle-2" type="submit"><p className="Update-progress">Add Book</p></button>
+          <button id="submit-btn" className="Rectangle-2 submit-btn base-button" type="submit"><p>Add Book</p></button>
         </form>
       </div>
     );
