@@ -14,7 +14,7 @@ class BooksForm extends React.Component {
     };
 
     this.categories = [
-      'Select Category',
+      'Category',
       'Action',
       'Biography',
       'History',
@@ -42,7 +42,7 @@ class BooksForm extends React.Component {
     e.preventDefault();
     const { onSubmitCreateBook } = this.props;
     const { title, category } = this.state;
-    if (title === '' || category === 'Select Category') { return; }
+    if (title === '' || category === 'Category') { return; }
 
     const book = {
       ...this.state,
@@ -54,18 +54,22 @@ class BooksForm extends React.Component {
   render() {
     const { title } = this.state;
     return (
-      <form action="#" onSubmit={this.handleSubmit}>
-        <input type="text" onChange={this.handleChange} value={title} id="inputValue" />
-        <select name="category" id="category" onChange={this.handleChange}>
-          {
-            this.categories.map((cat, id) => (
-              <option key={`opt_${id * 2}`} value={id}>{cat}</option>
-            ))
-          }
-        </select>
-        <button type="submit">Add Book</button>
-      </form>
-
+      <div className="form-block">
+        <div className="form-title">
+          add new book
+        </div>
+        <form action="#" onSubmit={this.handleSubmit}>
+          <input className="inputValue" type="text" onChange={this.handleChange} value={title} id="inputValue" placeholder="Book title" />
+          <select className="category" name="category" id="category" onChange={this.handleChange}>
+            {
+              this.categories.map((cat, id) => (
+                <option key={`opt_${id * 2}`} value={id}>{cat}</option>
+              ))
+            }
+          </select>
+          <button id="submit-btn" className="Rectangle-2 submit-btn base-button" type="submit"><p>Add Book</p></button>
+        </form>
+      </div>
     );
   }
 }

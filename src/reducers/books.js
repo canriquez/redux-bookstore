@@ -9,12 +9,12 @@ const booksList = [
   {
     id: randomId(),
     category: 'History',
-    title: 'Mine Craft - Adolf Hittler',
+    title: 'Atomic Habits',
   },
   {
     id: randomId(),
     category: 'Learning',
-    title: 'Tools of Titans',
+    title: 'The One Minute Manager',
   },
 ];
 

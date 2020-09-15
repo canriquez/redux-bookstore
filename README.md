@@ -2,11 +2,11 @@
 
 # React Redux Bookstore App
 
-> React/Redux Project to build the front-end of an application to organise and manage small bookstore.
+> React/Redux Project to build the front-end of an application to organize and manage a small bookstore.
 
-![screenshot](./app_screenshot.jpg)
+<img src='./app_usage.gif' width='50%'/>
 
-Additional description about the project and its features.
+# Additional description about the project and its features.
 
 ## Built With
 
@@ -23,15 +23,17 @@ Additional description about the project and its features.
 
 ## Getting Started
 
+To get a local copy up and running, follow these simple steps.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Clone or fork the <a href="https://github.com/canriquez/redux-bookstore/">repo</a> [git@github.com:canriquez/redux-bookstore.git].
 
+*note you need have install npm or yarn.
+* [npm](https://www.npmjs.com/get-npm)
+* [yarn](https://classic.yarnpkg.com/en/docs/install)
 
-To get a local copy up and running follow these simple example steps.
+## How it Works
 
-### Prerequisites
-
-### Setup
+This webpage is built on ES6 & React basis. All of the resources (images, fonts) and .js files are located inside `/src` folder.
 
 ## Install
 
@@ -53,15 +55,22 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+
 ### Usage
+
+You are provided with a set of booklist to init the app. You are free to delete them and add your new preferred ones. Add as many as you like with the form provided on the footer setting a title and a book category. 
+
+Once you have all of your books set on the list, you can filter them with the navbar category selector.
+
+Refresh to get your app to init again.
+
 
 ### Run tests
 
-### Deployment
-
-
-
-## Authors
+*   Run the test suite app for store actions with
+    ```
+    $ npm test
+    ```
 
 
 ## Authors
@@ -73,16 +82,16 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - Linkedin: [linkedin](https://www.linkedin.com/in/carlosanriquez/)
 - Portfolio: [carlosanriquez.com](https://www.carlosanriquez.com)
 
-👤 **Ricardo Valtierra**
+👤 ***Ricardo Valtierra***
 
-- Github: [@githubhandle](https://github.com/ricardovaltierra)
-- Twitter: [@twitterhandle](https://twitter.com/RicardoValtie15)
-- Linkedin: [linkedin](https://www.linkedin.com/in/ricardovaltierra/)
+- Github: [@ricardovaltierra](https://github.com/ricardovaltierra)
+- Twitter: [@RicardoValtie15](https://twitter.com/RicardoValtie15)
+- Linkedin: [ricardovaltierra.com](https://www.linkedin.com/in/ricardovaltierra/)
 
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](issues/).
 
@@ -92,9 +101,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+@microverseinc
+Family and friends!
 
 ## 📝 License
 
