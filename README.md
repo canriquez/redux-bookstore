@@ -1,8 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-## Available Scripts
+# React Redux Bookstore App
 
-In the project directory, you can run:
+> React/Redux Project to build the front-end of an application to organize and manage a small bookstore.
+
+<img src='./app_usage.gif' width='50%'/>
+
+# Additional description about the project and its features.
+
+## Built With
+
+- React.js, Webpack, Babel
+- HTML5/CSS3, Javascript ES6
+- ESlint, Stylelint
+- VSCode
+
+
+## Live Demo @Heroku
+
+[Live Demo Link](https://rdx-bookstore.herokuapp.com)
+
+
+## Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+Clone or fork the [repo](https://github.com/canriquez/redux-bookstore.git)
+
+*note you need have install npm or yarn.
+* [npm](https://www.npmjs.com/get-npm)
+* [yarn](https://classic.yarnpkg.com/en/docs/install)
+
+## How it Works
+
+This webpage is built on ES6 & React basis. All of the resources (images, fonts) and .js files are located inside `/src` folder.
+
+## Install
 
 ### `yarn start`
 
@@ -11,11 +44,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
@@ -27,42 +55,55 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Usage
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You are provided with a set of booklist to init the app. You are free to delete them and add your new preferred ones. Add as many as you like with the form provided on the footer setting a title and a book category. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Once you have all of your books set on the list, you can filter them with the navbar category selector.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Refresh to get your app to init again.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Run tests
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*   Run the test suite app for store actions with
+    ```
+    $ npm test
+    ```
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Authors
 
-### Analyzing the Bundle Size
+👤 ***Carlos Anriquez***
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Github: [@canriquez](https://github.com/canriquez)
+- Twitter: [@cranriquez](https://twitter.com/cranriquez)
+- Linkedin: [linkedin](https://www.linkedin.com/in/carlosanriquez/)
+- Portfolio: [carlosanriquez.com](https://www.carlosanriquez.com)
 
-### Making a Progressive Web App
+👤 ***Ricardo Valtierra***
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- Github: [@ricardovaltierra](https://github.com/ricardovaltierra)
+- Twitter: [@RicardoValtie15](https://twitter.com/RicardoValtie15)
+- Linkedin: [ricardovaltierra.com](https://www.linkedin.com/in/ricardovaltierra/)
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## 🤝 Contributing
 
-### Deployment
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Feel free to check the [issues page](issues/).
 
-### `yarn build` fails to minify
+## Show your support
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+@microverseinc
+Family and friends!
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.
