@@ -25,7 +25,7 @@
 
 To get a local copy up and running, follow these simple steps.
 
-Clone or fork the (https://github.com/canriquez/redux-bookstore/)[git@github.com:canriquez/redux-bookstore.git].
+Clone or fork the [https://github.com/canriquez/redux-bookstore/](git@github.com:canriquez/redux-bookstore.git)
 
 *note you need have install npm or yarn.
 * [npm](https://www.npmjs.com/get-npm)
