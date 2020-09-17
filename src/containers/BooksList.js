@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
-import { removeBook, deleteApiBook, changeFilter } from '../actions/index';
+import { removeBook, deleteApiBook, changeFilter, getApiBookList } from '../actions/index';
 
 const filterBook = (
   book, currentFilter,
@@ -18,11 +18,14 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispach => ({
   handleRemoveBook: book => {
-    dispach(deleteApiBook(book))
+    dispach(deleteApiBook(book)).then(
+      console.log('promise is working')
+    );
+    //dispach(getApiBookList())
     //dispach(removeBook(book));
   },
   handleFilterChange: newFilter => {
-    dispach(changeFilter(newFilter));
+    dispach(changeFilter(newFilter))
   },
 });
 
@@ -33,7 +36,7 @@ const renderList = ({
 }) => {
 
 
-return (
+  return (
     <div>
       <CategoryFilter
         handleFilterChange={handleFilterChange}
@@ -59,7 +62,8 @@ return (
 
       </ul>
     </div>
-  )};
+  )
+};
 
 const BooksList = connect(
   mapStateToProps,

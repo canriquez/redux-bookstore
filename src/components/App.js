@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 
 const App = ({
-  readApiBookList
+  readApiBookList //render complete and actual book list from API
   })=> {
 
   

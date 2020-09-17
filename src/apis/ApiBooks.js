@@ -70,8 +70,10 @@ const destroyApiBook = async ({ id }) => {
     }
     try {
         const response = await fetch(appURL, request);
-        const result = await response.json();
-        return result;
+        //const result = await response.json();
+        console.log(response)
+        return response;
+
     } catch (err) {
         throw ('Something went wrong with destroying book ', err);
     }

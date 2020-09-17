@@ -46,20 +46,68 @@ const getApiBookList = () => {
   }
 }
 
-const deleteApiBook = (book) => {
+/* const deleteApiBook = (book) => {
   return (dispatch) => {
     console.log('destroy book - fetch API here')
-    console.log(destroyApiBook(book));
+    destroyApiBook(book).then(() => {
+      fetchApiBookList().then((result) => {
+        console.log(result)
+        dispatch(updateBookList(result))
+      })
+    });
   }
-}
+} */
+
+
+const deleteApiBook = (book) => {
+  return (dispatch) => {
+    return destroyApiBook(book)
+      .then(response=> {
+        fetchApiBookList().then((result) => {
+          console.log(result)
+          dispatch(updateBookList(result))
+          return result;
+        }).catch(error => {
+            throw (error)
+          });
+      })
+      .catch(error => {
+        throw (error)
+      });
+  };
+};
+
+
+/* const createApiBook = (book) => {
+  return (dispatch) => {
+    console.log('create book  - fetch API here')
+    storeApiBook(book);
+  }
+} */
+
+//const createApiBook = book => (dispatch, getState) => Promise.resolve().then(() => {
+  //const { someReducer } = getState();
+ // console.log('just in createApiBook')
+ // storeApiBook(book);
+/*   return (dispatch) => {
+    console.log('create book  - fetch API here')
+    storeApiBook(book);
+  } */
+//});
 
 const createApiBook = (book) => {
   return (dispatch) => {
-    console.log('create book  - fetch API here')
-    console.log(storeApiBook(book));
-  }
+    return storeApiBook(book)
+      .then(response=> {
+        return response;
+      })
+      .catch(error => {
+        throw (error)
+      });
+  };
+};
 
-}
+
 export {
   addBook, removeBook, updateBookList, changeFilter,
   getBookListApi, getApiBookList, deleteApiBook, createApiBook
