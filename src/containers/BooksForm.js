@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { randomId } from '../helpers/help';
-import { addBook, createApiBook, getApiBookList } from '../actions/index';
+import { createApiBook, getApiBookList } from '../actions/index';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -80,18 +80,15 @@ BooksForm.propTypes = {
 
 const mapDispatchToProps = dispatch => ({
   onSubmitCreateBook: book => {
-    console.log('do create book');
-    console.log(book);
+    // eslint-disable-next-line
     dispatch(createApiBook(book)).then(response => {
-        console.log('getting the book list')
-        dispatch(getApiBookList())
+      dispatch(getApiBookList());
     }) // dispatch with thunk function
-    .catch((err)=>{
-       throw ('Something went wrong with API Storing Book ', err);
-    })
+      .catch(err => {
+        throw ('Something went wrong with API Storing Book ', err);
+      });
 
-    //dispatch(addBook(book));
-
+    // dispatch(addBook(book));
   },
 });
 

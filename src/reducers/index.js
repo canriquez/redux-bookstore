@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux';
 import books from './books';
 import filter from './filter';
-import booksApi from './booksApi'
-
+import booksApi from './booksApi';
 
 // rootReducer
 

@@ -1,15 +1,13 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
+import { connect } from 'react-redux';
 import BooksList from '../containers/BooksList';
 import BooksForm from '../containers/BooksForm';
-import { getApiBookList } from '../actions/index'
-import { connect } from 'react-redux';
-
+import { getApiBookList } from '../actions/index';
 
 const App = ({
-  readApiBookList //render complete and actual book list from API
-  })=> {
-
-  
+  readApiBookList, // render complete and actual book list from API
+}) => {
   readApiBookList();
 
   return (
@@ -23,15 +21,16 @@ const App = ({
       <BooksList />
       <BooksForm />
     </div>
-  )
-  };
+  );
+};
 
+const mapDispatchToProps = dispatch => ({
+  readApiBookList: () => dispatch(getApiBookList()),
+});
 
-const mapDispatchToProps = dispatch => {
-  return {
-    readApiBookList: ()=>dispatch(getApiBookList())
-  }
-}
+App.propTypes = {
+  readApiBookList: PropTypes.func.isRequired,
+};
 
-//export default App;
-export default connect(null,mapDispatchToProps)(App)
+// export default App;
+export default connect(null, mapDispatchToProps)(App);

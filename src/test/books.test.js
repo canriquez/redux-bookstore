@@ -60,26 +60,26 @@ it('test updates book_list in full', () => {
       title: 'the title',
     },
   ];
-  const book_list = [
+  const bookList = [
     {
-    id: 345,
-    category: 'science',
-    title: 'the title 1',
-  },
-  {
-    id: 346,
-    category: 'science',
-    title: 'the title 2',
-  }
-  ]
+      id: 345,
+      category: 'science',
+      title: 'the title 1',
+    },
+    {
+      id: 346,
+      category: 'science',
+      title: 'the title 2',
+    },
+  ];
 
-  const stateAfter = book_list;
+  const stateAfter = bookList;
 
   /* inmmutability check */
   deepFreeze(stateBefore); // makes sure reducer is pure function
   deepFreeze(removeBook); // makes sure reducer is pure function
 
   expect(
-    books(stateBefore, updateBookList(book_list)),
+    books(stateBefore, updateBookList(bookList)),
   ).toEqual(stateAfter);
 });
