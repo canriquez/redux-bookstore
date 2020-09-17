@@ -2,7 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
-import { removeBook, changeFilter } from '../actions/index';
+import {
+  deleteApiBook, changeFilter,
+} from '../actions/index';
 
 const filterBook = (
   book, currentFilter,
@@ -18,7 +20,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispach => ({
   handleRemoveBook: book => {
-    dispach(removeBook(book));
+    dispach(deleteApiBook(book)).then(
+    );
   },
   handleFilterChange: newFilter => {
     dispach(changeFilter(newFilter));
