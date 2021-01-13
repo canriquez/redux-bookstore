@@ -87,7 +87,7 @@ Refresh to get your app to init again.
 - Github: [@ricardovaltierra](https://github.com/ricardovaltierra)
 - Twitter: [@RicardoValtie15](https://twitter.com/RicardoValtie15)
 - Linkedin: [linkedin](https://www.linkedin.com/in/ricardovaltierra/)
-- Linkedin: [ricardovaltierra.me](https://ricardovaltierra.me)
+- Portfolio: [ricardovaltierra.me](https://ricardovaltierra.me)
 
 
 ## 🤝 Contributing
